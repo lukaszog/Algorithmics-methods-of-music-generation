@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage[textwidth=6.5in,textheight=8.5in]{geometry}
+\usepackage[osf]{mathpazo}
+\usepackage{textcomp}
+\PassOptionsToPackage{urlcolor=black,colorlinks}{hyperref}
+\RequirePackage{hyperref}
+\usepackage{xcolor}
+\newcommand{\myurl}[1]{\textcolor{blue}{\underline{\textcolor{black}{\url{#1}}}}}
+\newcommand{\musixflxVersion}{0.83.3}
+\begin{document}
+\title{Installation of the CTAN MusiXTeX Fonts Distribution}
+\author{Bob Tennent\\
+\small\url{rdt@cs.queensu.ca}}
+\date{\today}
+\maketitle 
+\thispagestyle{empty}
+
+\section{Introduction}
+Before trying to install from CTAN, check whether your TeX distribution
+provides packages for MusiXTeX; this will be easier than doing it yourself.
+But if your TeX distribution
+doesn't have MusiXTeX (or doesn't have the most recent version), this distribution
+of the MusiXTeX fonts is very easy to install, though
+you may need to read the material on 
+installation of (La)TeX files in the 
+TeX FAQ\footnote{%
+\myurl{http://www.tex.ac.uk/cgi-bin/texfaq2html}},
+particularly
+the pages on 
+which tree to use\footnote{%
+\myurl{http://www.tex.ac.uk/cgi-bin/texfaq2html?label=what-TDS}}
+and installing files\footnote{%
+\myurl{http://www.tex.ac.uk/cgi-bin/texfaq2html?label=inst-wlcf}}.
+
+\section{Installing \texttt{musixtex-fonts.tds.zip}}
+
+In this distribution of the MusiXTeX fonts, all of the files to be installed 
+are in 
+\begin{list}{}{}\item
+\myurl{http://mirror.ctan.org/install/fonts/musixtex-fonts.tds.zip}
+\end{list}
+at CTAN. The archive is a zipped TEXMF
+hierarchy; simply download and unzip this archive in the root folder/directory of whichever TEXMF tree
+you decide is most appropriate, likely a ``local'' or ``personal'' one.
+This should work with any TDS\footnote{%
+\myurl{http://www.tex.ac.uk/cgi-bin/texfaq2html?label=tds}}
+compliant TeX distribution, including MikTeX, TeXlive and teTeX.
+
+After unzipping the archive, update the filename database as necessary,
+for example, by executing \verb\texhash ~/texmf\ or 
+clicking the button labelled ``Refresh FNDB" in the MikTeX settings program.
+
+You now need to update various font-map files.  The details vary from one distribution
+to another.  
+On any current TeXLive-based system, or a teTeX v3.0 system, execute the command
+\begin{list}{}{}\item
+    \verb\updmap --enable MixedMap=musix.map\
+\end{list}
+if you've installed into a ``personal'' TEXMF tree, or 
+\begin{list}{}{}\item
+    \verb\updmap-sys --enable MixedMap=musix.map\
+\end{list}
+(as super-user) if you've installed to a ``local'' TEXMF tree.
+
+On an older MiKTeX system, you may need to update the system file \verb\updmap.cfg\, using the shell command
+\begin{list}{}{}\item
+    \verb\initexmf --edit-config-file updmap\
+\end{list}
+adding the following line at the end if it isn't already there:
+\begin{list}{}{}\item
+    \verb\MixedMap musix.map\
+\end{list}
+Then generate revised font maps with the shell command
+\begin{list}{}{}\item
+    \verb\initexmf --mkmaps\
+\end{list}
+
+\section{Discussion}
+
+Additional documentation, additional
+add-on packages, and many examples of MusiXTeX typesetting may be found
+at the Werner Icking Music Archive\footnote{%
+\myurl{http://icking-music-archive.org}}.
+Support for users of MusiXTeX and related software may be obtained via
+the MusiXTeX mail list\footnote{%
+\myurl{http://tug.org/mailman/listinfo/tex-music}}.
+MusiXTeX fonts may be freely copied, duplicated and used in conformance to the
+GNU General Public License (Version~2, 1991, see included file \verb\gpl.txt\).
+
+\end{document}

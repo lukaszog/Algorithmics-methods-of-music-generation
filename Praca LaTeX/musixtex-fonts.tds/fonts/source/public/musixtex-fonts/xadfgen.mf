@@ -1,0 +1,236 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% basic def's -- taken from musixgen.mf     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pair pone, ptwo;
+transform t;
+path p;
+
+hlthick=.2pt;
+lthick=.4pt;
+
+pen line_pen, med_pen, coda_pen, thin_pen;
+med_pen:= pencircle scaled med;
+line_pen:= pencircle scaled lthick;
+coda_pen:= pencircle xscaled 1.25thick yscaled max(1,.75med);
+%thin_pen:= pencircle scaled max(1,.25pt);
+thin_pen:= pencircle scaled max(1,.4pt);
+
+apog_fact=.75;
+apog_nhw#=apog_fact*nhw#;
+
+picture save_pic, elem_pic;
+
+def savepic = save_pic:= currentpicture enddef;
+def save_elempic = elem_pic:= currentpicture enddef;
+def callpic = currentpicture:= save_pic enddef;
+
+def mirror (expr pone, ptwo) =
+  currentpicture:=currentpicture reflectedabout(round(pone),round(ptwo))
+enddef;
+
+def add_mirror (expr pone, ptwo) =
+  addto currentpicture also currentpicture
+        reflectedabout (round(pone), round(ptwo))
+enddef;
+
+def call_mirror (expr pone, ptwo) = callpic; mirror (pone, ptwo) enddef;
+
+def add_shift (expr pone, ptwo) =
+  addto currentpicture also currentpicture shifted (pone, ptwo)
+enddef;
+
+def call_add_shift (expr pone, ptwo) =
+  callpic; add_shift (pone, ptwo)
+enddef;
+
+def add_elempic (expr pone, ptwo) =
+  addto currentpicture also elem_pic shifted (pone, ptwo)
+enddef;
+
+def call_add_save_elempic (expr pone, ptwo) =
+  callpic; add_elempic(pone, ptwo); savepic
+enddef;
+
+def shift_pic (expr pone, ptwo) =
+  currentpicture:=currentpicture shifted (round(pone),round(ptwo))
+enddef;
+
+def fill_circle (expr diameter, zshift) =
+  fill fullcircle scaled diameter shifted zshift
+enddef;
+
+def fill_square (expr xwidth, ywidth, zshift) =
+  fill unitsquare xscaled xwidth yscaled ywidth shifted zshift
+enddef;
+
+%
+
+def staff=
+  for i=0 upto 4:
+    pickup pencircle yscaled lthick;
+    draw (-5nhw,i*nhh)--(5nhw,i*nhh);
+  endfor
+enddef;
+
+def Staff=
+  for i=0 upto 4:
+    pickup pencircle yscaled lthick;
+    draw (-5nhw,(i*nhh-.5nhh))--(5nhw,(i*nhh-.5nhh));
+  endfor
+enddef;
+
+def upstem=
+  fill_square (lthick, 5nhh, (0,-5nhh))
+enddef;
+
+def downstem=
+  fill_square (lthick, 5nhh, (nhw-hlthick,0))
+enddef;
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% character definitions      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% so-called Miyoshi accent ...something like <>
+% (give me the true name of this!)
+%
+beginchar(30, 0, 2.25nhh#, 0); "upper Miyoshi accent";
+  pickup med_pen;
+  draw (.15nhw, 1.9nhh)--(1.15nhw, 1.5nhh)--(.15nhw, 1.1nhh);
+  add_mirror (origin, down);
+  shift_pic (.5nhw, 0);
+  savepic;
+endchar;
+
+beginchar(31, 0, 0, 2.25nhh#); "lower Miyoshi accent";
+  call_mirror (origin, right);
+endchar;
+
+%
+% size-balanced (a little large) sforzato
+%
+beginchar(20, 0, 2.25nhh#, 0); "upper sforzato (size-balanced)";
+  x1=-.05nhw; x2=.5nhw; x3=nhw-x1; x3=x4+.28nhw; x6=x1+med;
+  y1=y6=y4=y3=nhh; y2=y1+1.4nhh;
+  z5-z6=whatever*(z2-z1);
+  z5-z4=whatever*(z2-z3);
+  fill z1--z2--z3--z4--z5--z6--cycle;
+  savepic;
+endchar;
+
+beginchar(21, 0, 0, 2.25nhh#); "lower sforzato (size-balanced)";
+  call_mirror (origin, right);
+endchar;
+
+%
+% coda with serif
+%
+beginchar(85, 0, 3.25nhh#, 0); "coda with serif";
+  mh:=3nhh;
+  x2 = 2nhw-x4 = 1/6mh; y2 = y4 = 1/2mh;
+  x3 = x5 = nhw; y3 = mh-y5 = 5/6mh;
+%  pickup thin_pen;
+  pickup thin_pen;
+  draw (0,mh/2)--(2nhw,mh/2);
+  draw (nhw-.3nhw,0 )--(nhw+.3nhw,0 );
+  draw (nhw-.3nhw,mh)--(nhw+.3nhw,mh);
+  draw (nhw,0)--(nhw,mh);
+  draw (0   ,mh/2-.3nhw)--(0   ,mh/2+.3nhw);
+  draw (2nhw,mh/2-.3nhw)--(2nhw,mh/2+.3nhw);
+  savepic;
+  pickup coda_pen;
+  draw z2..z3..z4..z5..cycle;
+  shift_pic (-nhw, 0);
+  labels (1,2,3,4);
+endchar;
+
+%
+% upright segno
+%
+beginchar(86, 0, 3.25nhh#, 0); "upright segno";
+  x1:= 0; y1:=0;
+  x4:=-.69nhw; y4:=y1;
+  x5:=.36nhw;  y5:=.9nhh;
+  x6:=-.28nhw; y6:=.97nhh;
+  x7:=-x5;  y7:=-y5;
+  x8:=-x6;  y8:=-y6;
+  z1'= (x1+1,y1);
+  penpos1'(.5nhh+blacker, 75);
+  penpos6(max(1,thin), -45);
+  penpos5(max(1,thin), -180);
+  penpos8(max(1,thin), -45);
+  penpos7(max(1,thin), -180);
+  fill_circle (.45nhh, (x5-.15nhh, y5l-.12nhh));
+  fill_circle (.42nhh, (x4, y4));
+%  pickup thin_pen;
+  pickup thin_pen;
+  draw ( ( (x4-.2nhh)+(2x1-x5) )/2, y1-(y5l-y4)/2-.05nhh)--z1;
+  addto currentpicture also currentpicture rotatedaround (z1, 180);
+  penstroke z7e..{ne}z8e..z1'e{dir135}..{ne}z6e..z5e;
+%  penlabels (1,4,5,6,7,8);
+  shift_pic (.5nhw, 1.5nhh);
+endchar;
+
+%
+% V-shaped breath
+%
+beginchar(33, 0, 1.5nhh#, 0); "V-shaped breath (up)";
+  pickup thin_pen;
+  draw (.1nhw, 1.5nhh)--(.5nhw, .05nhh);
+  add_mirror ((.5nhw,0),(.5nhw,1));
+  savepic;
+endchar;
+beginchar(34, 0, 0, 1.5nhh#); "V-shaped breath (down)";
+  call_mirror (origin, right);
+endchar;
+
+
+%%%%%%%
+message ("<noteheads>");
+%%%%%%%
+
+NHW=nhw+hlthick;
+
+beginchar(7, 0, .5nhh#, .5nhh#); "quarter note";
+% makeshift, expedience
+  corNHW=1.065*NHW;
+    fill fullcircle xscaled corNHW yscaled 1.85h
+         rotated 20 shifted (.5NHW, 0);
+endchar;
+
+beginchar(8, 0, .5nhh#, .5nhh#); "half note";
+  penpos1(max(1,2hlthick), 0);
+  penpos3(max(1,2hlthick), 180);
+  penpos2(thick,-90);
+  penpos4(thick, 90);
+  -x1l = .53NHW;
+  x3l = .5NHW;
+  x2 = x4 = y1 = y3 = 0;
+  y2l =-y4l = h;
+  penstroke (z1e{up}..z2e{right}..z3e{down}..z4e{left}..cycle)
+             rotated 20 shifted (.5NHW, 0);
+endchar;
+
+beginchar(9, 0, .5nhh#, .5nhh#); "whole note";
+  x1= y1 = y3 = y5 = y7 = 0;
+  x3= 2x2 = 2x4 = 2x6 = 2x8 = 5/4nhw;
+  y2=-y4 = h;
+  x5= x3-x7 = x1+.375nhw-blacker;
+  y6=-y8 = y2-.1thin;
+  fill z1{curl3}..z2..{curl3}z3{curl3}..z4..{curl3}cycle;
+  unfill (z5..z6..z7..z8..cycle) rotatedaround ((x2,0), 45) shifted (.5,.5);
+%{{{
+  currentpen:= pencircle;
+  draw rt z1{curl3}..bot z2..{curl3}lft z3{curl3}..top z4..{curl3}cycle;
+%}}}
+  labels(range 1 thru 8);
+  savepic;
+endchar;
+
+
+
+end.

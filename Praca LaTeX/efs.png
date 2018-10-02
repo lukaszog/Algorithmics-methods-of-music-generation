@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+    <title>Strona nie znaleziona | Informatyka MIMUW</title>
+    <link type="text/css" rel="stylesheet" media="all" href="/modules/book/book.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/geshifilter/geshifilter.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/img_assist/img_assist.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?w" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/files/color/garland-0431760f/style.css?w" />
+<link type="text/css" rel="stylesheet" media="print" href="/themes/garland/print.css?w" />
+    <script type="text/javascript" src="/misc/jquery.js?w"></script>
+<script type="text/javascript" src="/misc/drupal.js?w"></script>
+<script type="text/javascript" src="/sites/default/files/languages/pl_7618cc674030d51495c9d1ac3aae9126.js?w"></script>
+<script type="text/javascript" src="/sites/all/modules/img_assist/img_assist.js?w"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/themes/garland/fix-ie.css" />    <![endif]-->
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-321791-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body>
+
+<!-- Layout -->
+  <div id="header-region" class="clear-block"></div>
+
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+
+      <div id="header">
+        <div id="logo-floater">
+        <h1><a href="/" title="Informatyka MIMUW"><span>Informatyka MIMUW</span></a></h1>        </div>
+
+                                                    
+      </div> <!-- /header -->
+
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+                                        <h2>Strona nie znaleziona</h2>                                                  <div class="clear-block">
+            Żądana strona nie została odnaleziona.          </div>
+                    <div id="footer"></div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+      
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+    </body>
+</html>

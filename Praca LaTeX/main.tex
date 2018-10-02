@@ -1,0 +1,357 @@
+\documentclass[]{book}
+\usepackage[hmargin=2.5cm]{geometry}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, tabularx}
+\usepackage[format=plain,
+labelfont={bf,it},
+textfont=it]{caption}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc, shadings, shadows, shapes.arrows}
+\usepackage{makecell}
+\usepackage{array,ragged2e}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{adjustbox} 
+\usepackage{ucs}
+\usepackage{musixtex}
+\usepackage{pagenote} 
+\usepackage{wasysym}
+\usepackage[linguistics]{forest}
+\usepackage{harmony}
+\usepackage[toc,page]{appendix}
+\usepackage{textcomp}
+
+
+\lstset{
+	inputencoding=utf8x,
+	extendedchars=\true,
+  literate={ą}{{\k{a}}}1
+{Ą}{{\k{A}}}1
+{ę}{{\k{e}}}1
+{Ę}{{\k{E}}}1
+{ó}{{\'o}}1
+{Ó}{{\'O}}1
+{ś}{{\'s}}1
+{Ś}{{\'S}}1
+{ł}{{\l{}}}1
+{Ł}{{\L{}}}1
+{ż}{{\.z}}1
+{Ż}{{\.Z}}1
+{ź}{{\'z}}1
+{Ź}{{\'Z}}1
+{ć}{{\'c}}1
+{Ć}{{\'C}}1
+{ń}{{\'n}}1
+{Ń}{{\'N}}1
+}
+\usepackage{ulem}
+\usepackage{musicography}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{listings,chngcntr}
+\lstset
+{ %Formatting for code in appendix
+	language=Python,
+	basicstyle=\footnotesize,
+	numbers=left,
+	stepnumber=1,
+	showstringspaces=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=false,
+	xleftmargin=1cm
+}
+\theoremstyle{definition}
+\newtheorem{przyklad}{Przykład}[section]
+\newtheorem{definicja}{Definicja}[section]
+\newtheorem{pojecie}{Pojęcie}[section]
+\newtheorem{twierdzenie}{Twierdzenie}[section]
+\newtheorem{defi}{Definicja}[section]
+\newtheorem{ex}{Przykład}[section]
+\newtheorem{fact}{Fakt}
+\newtheorem{prof}{Dowód}
+\title{}
+\date{}
+\author{}
+\usetikzlibrary{positioning,automata}
+
+\newcommand*{\xml}[1]{\texttt{<#1>}}
+\usepackage{chngcntr}
+\counterwithout{pagenote}{chapter}
+
+\renewcommand*{\notedivision}{\section*{\notesname}}
+\renewcommand*{\pagenotesubhead}[1]{}
+
+\renewcommand\notenumintext[1]{{\large[#1]}}
+\renewcommand\notenuminnotes[1]{\newline{\large[#1]\space}}
+
+\renewcommand{\notesname}{Przypisy}
+
+\makepagenote 
+\begin{document}
+
+\begin{titlepage}
+	
+	\begin{flushright}
+		Załącznik nr 4 do zarządzenia Nr 45 \\
+		Rektora UMK z dnia 18 kwietnia 2016 r.
+	\end{flushright}
+	 
+	
+	\begin{center}
+		{\huge Uniwersytet Mikołaja Kopernika\\} {\huge Wydział Matematyki i Informatyki\\}  \vspace{2.1cm} {\Large Łukasz Ogan\\}
+	{\Large nr albumu: 260196\\}
+		\vspace{2cm}
+		{\Large Praca magisterska\\}
+		{\Large na kierunku informatyka\\}
+		\vspace{2cm} {\Huge Algorytmiczne metody generowania muzyki\\}
+	\end{center}
+	\hfill
+	\begin{minipage}{6cm}
+		\vspace{12mm}
+		{Opiekun pracy dyplomowej\\
+			dr Andrzej Kurpiel\\
+			\\}
+	\end{minipage}
+	\vspace{3.5cm}
+	\begin{center}
+		{Toruń 2018\\}
+	\end{center}
+	\vspace{1.2cm}
+
+\end{titlepage}	 
+
+\tableofcontents
+
+
+\input{./Wstep.tex}
+\input{./pierwszy.tex}
+\input{./drugi.tex}
+\input{./trzeci.tex}
+\input{./czwarty.tex}
+
+\begin{appendices}
+	\chapter{Elementy muzyki}
+	Dodatek opisuje podstawowe elementy teorii muzyki zaczynając od notacji muzycznej. Pojedyncza nuta jest opisywana za pomocą czterech właściwości.
+	\begin{itemize}
+		\item Wysokość dźwięku 
+		\item Czas trwania dźwięku
+		\item Głośność dźwięku
+		\item Barwa dźwięku, która zależy od instrumentu
+	\end{itemize}
+
+	\section{Wysokość dźwięku}
+	Klawiatura fortepianu składa się z pewnych stale powtarzających się ugrupowań klawiszy. Można wyróżnić tutaj siedem białych i pięć czarnych klawiszy, które znajdują się pomiędzy białymi takie ugrupowanie nazywane jest oktawą. Jest to podstawowa jednostka materiału dźwiękowego. Dźwięki odległe od siebie o oktawę są bardzo do siebie podobne. Wszystkie dźwięki odległe od siebie o oktawę noszą te same nazwy. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Scales_and_keyboard}
+		\caption{Układ dźwięków na klawiaturze fortepianu \pagenote{\texttt{https://pl.wikipedia.org/wiki/Plik:Scales\_and\_keyboard.png}}}
+		\label{fig:scalesandkeyboard}
+	\end{figure}
+	
+	
+	
+	Jeżeli struna drga 261.63 razy w ciągu sekundy, mówimy że drga z częstotliwością 261.63 Hz. Taką częstotliwość posiada środkowy dźwięk C. Standard ten został przyjęty w 1955 roku przez Międzynarodową Organizację Normalizacyjną$\pagenote{Randel, D.M. (2003 November). The Harvard Dictionary of Music. 4th edn. Belknap
+		Press of Harvard University Press.}$. Standardowa klawiatura fortepianu posiada 88 klawiszy częstotliwości poszczególnych klawiszy są w relacji z dźwiękiem C, relacje możemy opisać za pomocą prostego wzoru:
+	
+	\begin{equation}
+		freq(C) * 2^{\frac{s}{12}}		
+	\end{equation}
+
+	gdzie, \textit{freq(C)} oznacza częstotliwość dźwięku C, a \textit{s} to liczba z przedziału $<-39, 48>$, która oznacza interwał do danej nuty od nuty C. Każdy z 12 półtonów ma przyporządkowaną literę. 
+	
+	\section{Wartości nut}
+	Podstawową oraz największą wartością czasową w muzyce jest cała nuta (\musWhole), która odpowiada podstawowej wartości rytmicznej. Półnuta to nuta o czasie trwania połowie całej nuty (\musHalf). Ćwierćnuta trwa $\frac{1}{4}$ całej nuty, czyli połowę półnuty (\musQuarter). Ósemka to nuta o czasie trwania $\frac{1}{8}$ całej nuty (\musEighth). Szesnastka trwa $\frac{1}{16}$ całej nuty (\musSixteenth).  Różnice w wartościach czasowych nut ilustruje poniższy przykład. Kropka po nucie zwiększa jej czas trwania o połowę.
+		 
+	\begin{figure}[H]
+	\begin{center}
+		\scalebox{1.8}{
+	\begin{forest} 
+		[ \musWhole
+		[\musHalf
+		[ \musQuarter
+		[ \musEighth ] 
+		[ \musEighth ] 
+		]
+		[ \musQuarter
+		[ \musEighthDotted ] 
+		[ \musSixteenth ] 
+		]
+		]
+		[\musHalf
+		[ \musQuarterDotted
+		[ \musEighth ] 
+		[ \musEighth ] 	[ \musEighth ] 
+		]
+		[ \musEighth
+		[ \musSixteenth ] 
+		[ \musSixteenth ] 
+		]
+		]
+		]
+		]
+	\end{forest}
+}
+ \caption{Podział wartości rytmicznych nut}
+ 
+\end{center}
+\end{figure}
+
+	Wartości te są wynikiem podziału dwójkowego. Zasada tego podziału polega na dzieleniu większej wartości czasowej na dwie mniejsze. Obok podziału dwójkowego istnieje również podział trójkowy.
+	
+	\section{Metrum}
+	Utwór muzyczny jest podzielony w grupy za pomocą taktów. Metrum określa schemat rytmiczny taktu. Za jego pomocą określane jest z ilu i jakich jednostek rytmicznych składa się takt. Metrum zapisywane jest na początku tekstu w postaci pary cyfr. Dolna cyfra odpowiada za rodzaj jednostki rytmicznej w takcie (1 - \musWhole, 2 - \halfnote, 4 - \quarternote ). Popularne metra muzyczne:
+	\begin{itemize}
+		\item \Takt{4}{4} - używane w muzyce klasycznej i pop
+		\item \Takt{2}{2} - używane w marszach i muzyce orkierstowej
+		\item \Takt{2}{4} - używane w polkach
+		\item \Takt{3}{4} - używane w walcach i balladach
+	\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{takt}
+	\caption{Przykład zapisu metrum na pięciolinii}
+	\label{fig:takt}
+\end{figure}
+
+
+
+		
+	\section{Melodia i harmonia}
+	Podczas słuchania muzyki słychać jednocześnie wiele dźwięków. Melodię można opisać jako dźwięki słyszane kolejno - zwykle jest grana przez prawą rękę w kluczu wiolinowym, a harmonie jako dźwięki słyszane w tym samym czasie (akordy) - zwykle grana przez lewą rękę w kluczu basowym.
+	
+	Szereg dzwięków ułożonych według stałego schematu nazywa się skalą. Natomiast skalę muzyczną rozpoczynającą się od określonego dzwięku nazywamy gamą. W muzyce można wyróżnić klika podstawowych skal:
+	
+	\begin{itemize}
+		\item C major - C, D, E, F, G, A, B
+		\item D major - D, E, F\musSharp, G, A, B, C\musSharp
+		\item C naturalna minor - C, D, D\musSharp, F, G, G\musSharp, A\musSharp
+		\item C melodyczna minor - C, D, D\musSharp, F, G, A, B
+		\item C pentatonika - C, D, F, G, A
+	\end{itemize}  
+
+	Skale są definiowane przez początkową wartość. Wyróżnia się system dur-moll, który jest systemem tonalnym. Tworzą go dwa podstawowe rodzaje skal: durowe (majorowa) i molowa (minorowa). Muzyka pisana w tonacji durowej posiada wyraźny charakter pogodny i wesoły, natomiast muzyka pisana w tonacji molowej posiada wyraźny charakter smutny.  
+	
+	
+	
+	\section{Transpozycja}
+	
+	Transpozycja jest procesem, którego celem jest przeniesienie całego utworu muzycznego lub jego części o ustalony interwał w górę lub w dół. Efektem tego procesu jest zmiana tonacji utworu. Poniżej przykład linii melodycznej, która została przetransponowana o tercję wielką w dół. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{transpozycja}
+		\caption{Melodia w pierwszej linii jest w tonacji D-dur, natomiast po transpozycji w tonacji B\musFlat}
+		\label{fig:transpozycja}
+	\end{figure}
+	
+	
+	\section{Akordy}
+	Akordem nazywamy współbrzmienie co najmniej trzech dźwięków o różnej wysokości i nazwie. Akordy budowane są na różnych stopniach gamy zgodnie z zasadą istnienia szeregu harmonicznego czyli tercjami. Dźwięki wchodzące w skład akordu nazywane są składnikami akordu. Pierwszy składnik nazywany jest prymą, drugi - tercją, trzeci - kwintą, czwarty - septymą, piąty - noną, szósty - undecymą, siódmy - tercdecymą. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{akordy_stopinie}
+		\caption{Przykłady akordów na różnych stopniach gamy C-dur}
+		\label{fig:akordystopinie}
+	\end{figure}
+	Jeżeli najniższy dźwięk akordu nie jest jego podstawą to mówimy o jego przewrocie. Poniżej zostały przedstawione dwa przewroty akordu C-dur.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{przewroty}
+		\caption{Przewroty akordu C-dur}
+		\label{fig:przewroty}
+	\end{figure}
+	
+	Akord może występować w jednym z czterech podstawowych typów co ilustruje rysunek poniżej:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{typy_akordow}
+		\caption{Typy akordów}
+		\label{fig:typyakordow}
+	\end{figure}
+	
+	
+	
+	\section{Progresje}
+	Progresją akordów nazywamy uporządkowaną sekwencję akordów. Progresje akordów w utworach muzycznych są zwykle powtarzane kilka razy. W muzyce jazzowej korzysta się z tak zwanej progresji II - V - I, w której akordy budowane są kolejno na drugim stopniu gamy, piątym i pierwszym. Taka sekwencja jest powtarzana cztery razy. Po głębszej analizie harmmonii dzieł zachocnich dostrzec można schematy w sposobach łączenia akordów. 
+	
+	
+	
+\end{appendices}
+
+
+\newpage
+
+\begin{thebibliography}{9}
+	
+	\bibitem{citekey}
+	Ian Goodfellow and Yoshua Bengio and Aaron Courville. \textit{Deep Learning}, MIT Press, 2016
+	\bibitem{citekey}
+	David Cope. \textit{Experiments in music intelligence}, University of California, 1987
+	\bibitem{citekey}
+	George Tzanetakis. \textit{Bayes and Markov Listen to Music}, University of Victoria, 2017
+	\bibitem{citekey}
+	Douglas Mcllwraith, Haralambos Marmanis, Dmitry Babenko. \textit{Inteligentna Sieć, wydanie 2}, Helion, 2017
+	\bibitem{citekey}
+	Franciszek Wesołowski. \textit{Zasady muzyki}, Polskie Wydawnictwo Muzyczne SA, Kraków, 2010
+	\bibitem{citekey}
+	Bogdan Hołownia. \textit{O harmonii jazzowej: zapiski z szuflady}, Polskie Wydawnictwo Muzyczne SA, 2014
+	\bibitem{citekey}
+	Bin Cui, Jialie Shen, John Shepherd. \textit{Intelligent Music Information Systems: Tools and Methodologies}, Idea Group Reference; 1 edition (August 23, 2007)
+	\bibitem{citekey}
+	Christophear Olah \texttt{http://colah.github.io/posts/2015-08-Understanding-LSTMs/}
+	\bibitem{citekey}
+	Shi Yan \textit{Understanding LSTM and its diagrams}, \\\texttt{https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714}
+	\bibitem{citekey}
+	Walter Schulze. \textit{A Formal Language Theory Approach To Music Generation}, Department of Mathematics, Applied Mathematics and Computer Science, University of Stellenbosch, 2016
+	\bibitem{citekey}
+	Douglas Eck, Jurgen Schmidhuber. \textit{A First Look at Music Composition using LSTM Recurrent Neural Networks}, Technical Report No. IDSIA-07-02
+	\bibitem{citekey}
+	Andrzej Blikle. \textit{Automaty i gramatyki: wstęp do lingwistyki matematycznej}, PWN, 1971
+	\bibitem{citekey}
+	M. Chemillier. \textit{Toward a formal study of jazz chord sequences generated by Steedman’s
+	grammar}, Soft Computing 8 (2004) 1 – 6  Springer-Verlag, 2004
+	\bibitem{citekey}
+	Nicolas Privault. \textit{Understanding Markov Chains - Examples and Applications}, Springer, 2013
+	\bibitem{citekey}
+	Erlijn J. Linskens. \textit{Music Improvisation using Markov Chains}, University College Maastricht Maastricht University, 2014
+	\bibitem{citekey}
+	Walter Schulze and Brink van der Merwe Stellenbosch University. \textit{Music Generation with Markov Models}, IEEE, 2011
+	\bibitem{citekey}
+	Adam Jakubowski. \textit{Repetytorium z przedmiotu "Miara i prawdopodobienstwo"	dla kierunku "Informatyka" 2002/2003}, UMK
+	\bibitem{citekey}
+	Adam Jakubowski. \textit{Statystyka	i eksploracja danych Repetytorium z teorii prawdopodobienstwa}, UMK, 2011
+	\bibitem{citekey}
+	Holický, Milan. \textit{Introduction to Probability and Statistics for Engineers}, Springer, 2013
+	\bibitem{citekey}
+	David Wright. \textit{Mathematics and Music}, 2009
+	\bibitem{citekey}
+	Gunhild Elisabeth Berget. \textit{Using Hidden Markov Models for Musical Chord Prediction}, Norwegian University of Science and Technology, 2017
+	\bibitem{citekey}
+	Sebastian Raschka.\textit{ Python Machine Learning}, Packt, 2015
+	\bibitem{citekey}
+	Jason Brownlee. \textit{Long Short-Term Memory Networks With Python}, 2017
+	\bibitem{citekey}
+	François Chollet, \textit{Deep Learning with Python}, MANNING, 2018
+	\bibitem{citekey}
+	Nikhil Buduma. \textit{Fundamentals of Deep Learning}, O'Reilly, 2017
+	\bibitem{citekey}
+	Nipun Agarwala, Yuki Inoue, Axel Sly. \textit{Music Composition using Recurrent Neural Networks}, Stanford University
+	\bibitem{citekey}
+	Keunwoo Choi, George Fazekas, Mark Sandler. \textit{Text-based LSTM networks for Automatic Music Composition}, Queen Mary University of London
+	\bibitem{citekey}
+	Antonio Gulli, Sujit Pal. \textit{Deep Learning with Keras}, Packt, 2017
+	
+\end{thebibliography}
+
+\printnotes*
+
+\end{document}

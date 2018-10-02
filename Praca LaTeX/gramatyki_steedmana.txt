@@ -1,0 +1,34 @@
+\subsection{Gramatyki Steedmana}
+W teorii muzyki czêsto stosuje siê termin progresji. Stosujemy go je¿eli chcemy przenieœæ dan¹ melodiê lub strukturê harmoniczn¹ (akord) o okreœlon¹ odleg³oœæ w górê lub w dó³. W muzyce jazzowiej czêsto spotyka siê progresjê II-V-I, w której akordy oparte s¹ na II, V i I stopniu gamy. Mark Steedman w roku 1984 zaproponowa³ gramatykê, która opisuje nastêpstwa harmoniczne u¿ywane przez muzyków jazzowych. Steedman wzorowa³ siê na analizie dwunasto-barowej progresji jazzowej, któr¹ zaproponowa³ Coker w swojej ksi¹¿ce Improvising Jazz.
+
+Poni¿sza tabela prezentuje podstawow¹ progresje 12-barow¹ w tonacji C:
+
+\begin{tabular}{|c|c|c|c|}
+	\hline 
+	C & C & C & C7 \\ 
+	\hline 
+	F & F & C & C \\ 
+	\hline 
+	G & G7 & C & C \\ 
+	\hline 
+\end{tabular} 
+
+Kolejna tabela progresji powsta³a przez zastosowania dwóch regu³ gramatyki:
+
+\begin{tabular}{|c|c|c|c|}
+	\hline 
+	C & C & C & Gm7 C7 \\ 
+	\hline 
+	F & F & C & C \\ 
+	\hline 
+	Dm7 & G7 & C & C \\ 
+	\hline 
+\end{tabular} 
+
+Pierwsza regu³a, która zamienia czwart¹ progresjê: \newline
+$ C7 \rightarrow Gm7 C7$
+
+Druga regu³a, która zamienia dziewi¹t¹ progresjê: \newline
+$ G G7 \rightarrow Dm7 G7$
+
+Gramatyka zaproponowana przez Marka Steedmana sk³ada siê z szeœciu regu³ podobnego typu. Ka¿da z regu³ posiada zmienn¹ $x$, która to mo¿e przyjmowaæ dowolny stopieñ gamy np. $C, C\#, D, D\#$. Bior¹c pod uwagê liczbê nut w jednej oktawie ka¿da z regu³ Steedmana mo¿e korespondowaæ z dwunastoma ró¿nymi regu³ami. Ka¿dy akord jest zarówno terminalnym, jak i nie terminalnym symbolem gramatyki. Dodatkowa regu³a, która wprowadza zasadê, w której aksjomat gramatyki po lewej stronie jest zastêpowany sekwencj¹ akordów z podstawowej progresji bluesa. 

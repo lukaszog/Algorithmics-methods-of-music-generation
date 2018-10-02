@@ -1,0 +1,30 @@
+\chapter*{Wstęp}
+
+
+    O algorytmicznym komponowaniu muzyki myślano na długo przed powstaniem szybkich komputerów. Jako pionierów generowania sztucznej muzyki uważa się Hillera i Isaacsona \pagenote{Hiller, Lejaren Arthur, and Leonard M.
+	Isaacson. Experimental Music; Composition
+	with an electronic computer. Greenwood
+	Publishing Group Inc., 1979}. Obaj autorzy jako pierwsi w 1957 roku użyli komputera Uniwersytetu w Illinois do wygenerowania kompozycji dla kwartetu smyczkowego. Kolejnym ważnym krokiem w historii był rok 1991, w którym Horner i Goldberg opracowali algorytm genetyczny do generowania muzyki \pagenote{Horner, Andrew, and David E. Goldberg.
+	”Genetic algorithms and computer-assisted
+	music composition.” (1991): 337-441}. Wcześniej, w 1981 roku David Cope rozpoczął pracę nad algorytmiczną kompozycją. Połączył łańcuchy Markowa z gramatykami i elementami kombinatoryki. Stworzył pół automatyczny system, który nazwał "Experiments in Musical Intelligence". David Cope w swoich pracach cytuje Xenakisa i Lejarena Hillera jako swoje inspiracje. Łańcuchy Markowa mogą jedynie generować podsekwensje, które pochodzą z utworów, na podstawie których łańcuch stworzył macierz przejścia. Inne podejście do problematyki oferują Rekurencyjne Sieci Neuronowe (RNN) wychodzą poza te ograniczenia. W 1989 roku odbyły się pierwsze próby generowania muzyki za pomocą rekurencyjnych sieci neuronowych. Badania zostały opracowane przez Petera M. Dodda, Michaela C. Mozera\pagenote{\texttt{http://www.cs.colorado.edu/mozer/Research/Selected \space Publications/reprints/Mozer1994.pdf}}  i kliku innych naukowców. W roku 2002 dokonano przełomu przechodząc ze standardowych komórek rekurencyjnej sieci neuronowej do komórej pamięci długotrwałej - LSTM \textit{(Long Short Term Memory)}. Takie podejście wykorzystał Doug Eck do improwizacji bluesa w oparciu o krótkie nagranie\pagenote{\texttt{http://people.idsia.ch/~juergen/blues/IDSIA-07-02.pdf}}. Aktualnie Doug Eck kieruje zespołem projektu Magenta w Google Brain. Projekt Magenta wykorzystuje zastosowania sieci LSTM do generowania fraz perkusyjnych, melodii oraz do generowania muzyki polifonicznej.   
+
+	Celem pracy magisterskiej jest przeanalizowanie dostępnych metod za pomocą których można wygenerować frazy muzyczne. Analizie zostaną poddane: łańcuchy Markowa, gramatyki oraz sztuczne sieci neuronowe. W każdym przypadku przedstawiono konieczne elementy teorii matematycznych, na których oparte są konkretne przykłady generowania fraz muzycznych.
+	
+	Celem praktycznym pracy jest prezentacja interesujących przykładów zastosowania powyższych metod wraz ze szczegółową ich analizą oraz krytyką. Głównym celem praktycznym jest stworzenie własnego projektu, który wykorzysta rekurencyjne sieci neuronowe do wygenerowania nowej melodii na podstawie zadanego zbioru danych (zbiór plików MIDI). 
+	
+	Praca złożona jest z czterech rozdziałów. Pierwszy rozdział omawia łańcuchy Markowa z uwzględnieniem ukrytych łańcuchów Markowa. Przedstawione zostały zastosowania łańcuchów oraz praktyczne ich wykorzystanie przy generowaniu muzyki na podstawie analizy plików MIDI. Ukryte łańcuchy Markowa zostały przedstawione w kontekście generowania akordów jazzowych.
+	
+	Drugi rozdział "Gramatyki" omawia teorię języków i gramatyk formalnych ze szczególnym uwzględnieniem języków regularnych i bezkontekstowych. W rozdziale tym przedstawiono szereg aplikacji, które wykorzystują gramatyki bezkontekstowe przy generowaniu prostych melodii. 
+	
+	Rozdział trzeci "Sieci neuronowe" zawiera szczegółowe omówienie wielu elementów teorii sztucznych sieci neuronowych. W rozdziale zostały przedstawione najważniejsze rodzaje sieci neuronowych. Opisane zostały zasady działania rekurencyjnych sieci neuronowych oraz sieci \textit{Long Short Term Memory}. 
+	
+	
+	Rozdział czwarty  zawiera praktyczne przykłady wykorzystania sztucznych sieci neuronowych na polu generowania muzyki. Są to w większości rozbudowane projekty, które służą do generowania muzyki.	Rozdział ten opisuje własny projekt praktyczny. Projekt zawiera konstrukcje modelu rozbudowanej sieci neuronowej, której celem jest wygenerowanie melodii na podstawie zadanego zbioru danych.
+	
+	Do pracy pracy dołączono DVD-ROM, na którym znajduje się:
+	\begin{itemize}
+		\item Źródła pracy w języku LaTeX
+		\item Plik PDF pracy
+		\item Kody źródłowe do poszczególnych rozdziałów
+		\item Pliki MIDI
+	\end{itemize}

@@ -1,0 +1,49 @@
+This is musixtex-fonts, packaged 2015-07-04.  It contains all of
+the font-related files for MusiXTeX, including both the original
+metafont sources and Type 1 versions by Takanori Uchiyama.
+
+The main author of MusiXTeX was Daniel Taupin, who died in a climbing
+accident in 2003; other authors credited in the MusiXTeX manual are
+Andreas Egler and Ross Mitchell. MusiXTeX is now being maintained by
+
+Don Simons dsimons(at)roadrunner(dot)com
+Hiroaki Morimoto CQX05646(at)nifty(dot)com
+Bob Tennent rdt(at)cs(dot)queensu(dot)ca
+
+musixtex-fonts-install.{pdf,tex} is a more-detailed version of the
+following instructions:
+
+To install (on TDS-compliant TeX systems):
+
+ + download "tex-archive"/install/fonts/musixtex-fonts.tds.zip where
+    the preferred URL for "tex-archive" is http://mirror.ctan.org
+
+ +  unzip the archive at the root of a texmf tree and, if necessary,
+    update the filename database; e.g., texhash texmf.
+
+ +  update the relevant font-map files; e.g., append
+
+       MixedMap musix.map
+
+    to the relevant updmap.cfg, and execute updmap[-sys]
+
+Documentation for musixtex-fonts is installed under 
+
+doc/fonts/musixtex-fonts
+
+Additional documentation, additional add-on packages, and many examples
+of MusiXTeX typesetting may be found at the Werner Icking Music Archive
+at
+
+http://icking-music-archive.org/
+
+Support for users of MusiXTeX and related software may be obtained via
+the MusiXTeX mail list at
+
+http://tug.org/mailman/listinfo/tex-music
+
+MusiXTeX may be freely copied, duplicated and used in conformance to the
+GNU General Public License (Version 2, 1991, see included file gpl.txt).
+
+This CTAN distribution is maintained by Bob Tennent
+rdt(at)cs(dot)queensu(dot)ca.

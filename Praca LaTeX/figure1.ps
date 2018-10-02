@@ -1,0 +1,1583 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 195 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	newpath
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rad arcto
+	x2 y2 x2 y1 rad arcto
+	x2 y1 x1 y1 rad arcto
+	x1 y1 x1 y2 rad arcto
+	closepath
+	16 {pop} repeat
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} {is} {is} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 5 FMDOCUMENT
+0 0 /Times-Roman FMFONTDEFINE
+1 0 /Times-Italic FMFONTDEFINE
+2 0 /Times-BoldItalic FMFONTDEFINE
+3 0 /Times-Bold FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+90 72 522 81 R
+7 X
+0 K
+V
+90 108 522 720 C
+90 225.33 522 720 C
+0 8 Q
+0 X
+0 K
+0.04 (The composer and ear are genetic agents; they are evolved until they cooperate to produce \322good\323 music, and) 162 299 P
+-0.04 (only then is material generated. Each phrase is composed one motive at a time. When a motive is added to the) 162 291 P
+0.03 (working phrase, the ear module is consulted; if it disapproves, the motive is removed. When there are enough) 162 283 P
+0.41 (usable phrases, a number of structure chromosomes are produced by the arranger module, dictating how the) 162 275 P
+-0.44 (shorter phrases will be put together to form a lar) 162 267 P
+-0.44 (ger piece. The resultant pieces are auditioned and the successful) 312.23 267 P
+0.35 (structure chromosomes allowed to recombine to produce new chromosomes. The process thus creates music) 162 259 P
+(that gets \322better\323 as more generations of recombination and auditions go on.) 162 251 T
+1 9 Q
+(Figur) 303.87 236.33 T
+(e 1.) 324.01 236.33 T
+(The algorithmic composition system) 343.73 236.33 T
+2 F
+(variations) 476.04 236.33 T
+0.1 H
+2 Z
+180 270 17.96 27 346.33 490.17 A
+331.29 531.42 328.36 526.18 325.29 531.33 3 L
+0 Z
+N
+2 Z
+0 90 134.74 162 193.63 526.17 A
+229.56 598.17 319.39 652.17 R
+7 X
+V
+0.2 H
+0 X
+N
+202.62 409.17 328.37 436.17 2 L
+0.1 H
+3 X
+N
+202.62 463.17 328.37 454.17 2 L
+N
+145.79 664.93 148.72 670.17 151.79 665.01 3 L
+0 Z
+0 X
+N
+2 Z
+180 270 134.74 162 283.45 670.16 A
+319.39 409.17 409.21 427.17 R
+7 X
+V
+3 8 Q
+0 X
+(Y r) 333.06 421.83 T
+(elated phrases:) 344.24 421.83 T
+0 F
+(1 for each ear chromosome) 320.79 413.83 T
+319.39 409.17 409.21 427.17 R
+0.2 H
+7 X
+N
+189 346.17 288 355.17 R
+V
+2 F
+0 X
+(Z) 194.12 349.83 T
+3 F
+(structur) 203.01 349.83 T
+(e chr) 230.84 349.83 T
+(omosomes) 247.79 349.83 T
+171.3 319.17 307.25 346.17 R
+7 X
+V
+0 F
+0 X
+(Each represents a dif) 176.95 340.83 T
+(ferent progression) 243.64 340.83 T
+(through the generated material.) 189.31 332.83 T
+405.82 656.67 494.18 670.17 R
+7 X
+V
+2 F
+0 X
+(Y) 415.77 664.83 T
+3 F
+(ear chr) 424.65 664.83 T
+(omosomes) 449.15 664.83 T
+396 580.17 504 661.17 R
+7 X
+V
+0 F
+0 X
+-0.08 (The alleles on each chromosome) 397.6 655.83 P
+(represent valid chords, and adja-) 397.93 647.83 T
+-0.12 (cent alleles represent valid chord) 397.38 639.83 P
+(transitions; each chromosome) 402.25 631.83 T
+(therefore represents a dif) 400.9 623.83 T
+(ferent) 480.45 623.83 T
+(system of tonality) 404.84 615.83 T
+(. Only one) 461.63 615.83 T
+(chromosome is active at a time,) 399.37 607.83 T
+(and it remains active until the) 402.59 599.83 T
+(phrase is \336nished.) 421.24 591.83 T
+272.63 638.01 292.44 643.17 R
+6 X
+V
+0.05 H
+0 X
+N
+3 F
+(.) 0 -270 258.51 376.67 TF
+(.) 0 -270 266.51 376.67 TF
+(.) 0 -270 274.51 376.67 TF
+151 370.17 145.81 373.18 151.01 376.17 3 L
+0.2 H
+0 Z
+N
+2 Z
+0 90 200.51 21.08 145.81 352.09 A
+336.03 322.19 341.22 319.18 336.02 316.19 3 L
+0 Z
+N
+2 Z
+180 270 203.92 18 341.23 337.17 A
+229.56 598.17 319.39 616.17 R
+7 X
+V
+0 X
+(phrase:) 261.59 610.83 T
+0 F
+(motive 1) 241.27 602.83 T
+3 F
+( ...) 269.48 602.83 T
+0 F
+(motive n) 279.47 602.83 T
+229.56 598.17 319.39 616.17 R
+7 X
+N
+3 F
+0 X
+(.) 446.97 502.67 T
+(.) 446.97 494.67 T
+(.) 446.97 486.67 T
+369 469 432 493.5 R
+7 X
+V
+0 F
+0 X
+(the active chromo-) 370.52 488.17 T
+(some answers) 378.18 480.17 T
+373.28 519.22 427.18 537.22 R
+7 X
+V
+0 X
+(phrase) 389.8 531.89 T
+(acceptable?) 381.58 523.89 T
+6 X
+90 450 13.47 4.5 447.97 575.5 G
+0 X
+90 450 13.47 4.5 447.97 575.5 A
+6 X
+90 450 13.47 4.5 447.97 566.5 G
+0 X
+90 450 13.47 4.5 447.97 566.5 A
+6 X
+90 450 13.47 4.5 447.97 557.5 G
+0 X
+90 450 13.47 4.5 447.97 557.5 A
+6 X
+90 450 13.47 4.5 447.97 548.5 G
+0 X
+90 450 13.47 4.5 447.97 548.5 A
+6 X
+90 450 13.47 4.5 447.97 539.5 G
+0 X
+90 450 13.47 4.5 447.97 539.5 A
+6 X
+90 450 13.47 4.5 447.97 530.5 G
+0 X
+90 450 13.47 4.5 447.97 530.5 A
+6 X
+90 450 13.47 4.5 447.97 521.5 G
+0 X
+90 450 13.47 4.5 447.97 521.5 A
+6 X
+90 450 13.47 4.5 447.97 512.5 G
+0 X
+90 450 13.47 4.5 447.97 512.5 A
+6 X
+90 450 13.47 4.5 447.97 476.5 G
+0 X
+90 450 13.47 4.5 447.97 476.5 A
+421.98 520.17 427.18 517.17 421.98 514.17 3 L
+0 Z
+N
+373.28 517.17 427.08 517.17 2 L
+2 Z
+N
+378.48 496.17 373.28 499.17 378.48 502.17 3 L
+0 Z
+N
+427.18 499.17 373.38 499.17 2 L
+2 Z
+N
+464.59 475.83 517.84 566 R
+7 X
+V
+0 X
+(The active chro-) 465.02 560.67 T
+(mosome com-) 468.45 552.67 T
+-0.38 (pares the phrase) 465.46 544.67 P
+-0.08 (against its inter-) 465.53 536.67 P
+(nal list of valid) 467.12 528.67 T
+(transitions. If) 469.89 520.67 T
+(no transition is) 467.45 512.67 T
+(invalid, the) 473.22 504.67 T
+(active chromo-) 467.12 496.67 T
+-0.06 (some \322accepts\323) 466.46 488.67 P
+(the phrase.) 473.9 480.67 T
+184.65 697.17 256.51 715.17 R
+7 X
+V
+0 X
+(Input:) 211.03 709.83 T
+3 F
+(primary motives) 191.27 701.83 T
+0 F
+(.) 247.89 701.83 T
+154.64 707.16 148.72 706.17 150.82 711.79 3 L
+0 Z
+N
+2 Z
+90 180 53.89 9 202.61 706.17 A
+3 F
+(.) 0 -270 168.75 610.67 TF
+(.) 0 -270 176.75 610.67 TF
+(.) 0 -270 184.75 610.67 TF
+6 X
+90 450 4.9 13.5 99.72 611.67 G
+0 X
+90 450 4.9 13.5 99.72 611.67 A
+6 X
+90 450 4.9 13.5 109.52 611.67 G
+0 X
+90 450 4.9 13.5 109.52 611.67 A
+6 X
+90 450 4.9 13.5 119.32 611.67 G
+0 X
+90 450 4.9 13.5 119.32 611.67 A
+6 X
+90 450 4.9 13.5 129.12 611.67 G
+0 X
+90 450 4.9 13.5 129.12 611.67 A
+6 X
+90 450 4.9 13.5 138.92 611.67 G
+0 X
+90 450 4.9 13.5 138.92 611.67 A
+6 X
+90 450 4.9 13.5 148.72 611.67 G
+0 X
+90 450 4.9 13.5 148.72 611.67 A
+6 X
+90 450 4.9 13.5 158.52 611.67 G
+0 X
+90 450 4.9 13.5 158.52 611.67 A
+6 X
+90 450 4.9 13.5 198.53 611.67 G
+0 X
+90 450 4.9 13.5 198.53 611.67 A
+105.44 580.17 207 589.17 R
+7 X
+V
+2 F
+0 X
+(X) 110.88 583.83 T
+3 F
+(composer chr) 120.21 583.83 T
+(omosomes) 166.48 583.83 T
+136.74 655.97 139.74 661.17 142.74 655.97 3 L
+0 Z
+N
+139.74 634.17 139.74 661.07 2 L
+2 Z
+N
+160.7 639.36 157.7 634.17 154.7 639.36 3 L
+0 Z
+N
+157.7 634.27 157.7 661.17 2 L
+2 Z
+N
+0 F
+-1.1 (Composer) 95.73 664.83 P
+-1.1 (\325) 128.89 664.83 P
+-1.1 (s) 131.12 664.83 P
+(parameters) 97.44 656.83 T
+(are de\336ned) 97.33 648.83 T
+(by its chro-) 96.77 640.83 T
+(mosomes.) 98.87 632.83 T
+94.82 544.17 238.54 580.17 R
+7 X
+V
+0 X
+(Each chromosome describes one stochastic) 97.63 574.83 T
+-0.41 (process within the composer module, such as) 94.82 566.83 P
+(weighted variation rates, phrase lengths, or) 97.96 558.83 T
+(transposition tables.) 134.7 550.83 T
+319.39 409.17 409.21 463.17 R
+N
+328.37 436.17 337.35 454.17 R
+V
+0.05 H
+N
+346.34 436.17 355.32 454.17 R
+5 X
+V
+0 X
+N
+382.27 436.17 391.25 454.17 R
+1 X
+V
+0 X
+N
+373.28 436.17 382.27 454.17 R
+6 X
+V
+0 X
+N
+355.32 436.17 364.3 454.17 R
+4 X
+V
+0 X
+N
+364.3 436.17 373.28 454.17 R
+2 X
+V
+0 X
+N
+391.25 436.17 400.23 454.17 R
+3 X
+V
+0 X
+N
+233.17 642.94 269.1 648.09 R
+4 X
+V
+0 X
+N
+233.48 638.01 253.29 643.17 R
+6 X
+V
+0 X
+N
+241.46 633.4 265.88 638.55 R
+3 X
+V
+0 X
+N
+250.98 627.86 311.48 633.01 R
+2 X
+V
+0 X
+N
+273.09 633.4 312.86 638.55 R
+3 X
+V
+0 X
+N
+5 X
+90 450 42.49 18 366.73 337.17 G
+0.2 H
+0 X
+90 450 42.49 18 366.73 337.17 A
+332.74 334.35 400.71 340.78 R
+5 X
+V
+3 F
+0 X
+(arranger) 351.41 335.45 T
+432.32 319.17 517 427.17 R
+7 X
+V
+0 F
+0 X
+(The accepted phrases are) 434.59 421.83 T
+(collected and sent to the) 436.02 413.83 T
+(arranger module. The) 440.14 405.83 T
+-0.21 (arranger module creates a) 433.48 397.83 P
+(set of chromosomes that) 435.69 389.83 T
+-0.39 (represent the arrangement) 433.15 381.83 P
+(and orchestration of the) 436.8 373.83 T
+(piece. The structures are) 435.59 365.83 T
+(evaluated and better) 442.47 357.83 T
+(sounding structures) 443.46 349.83 T
+(recombine to form new) 437.25 341.83 T
+(structures.) 458.12 333.83 T
+6 X
+90 450 4.63 13.5 192.92 377.67 G
+0 X
+90 450 4.63 13.5 192.92 377.67 A
+6 X
+90 450 4.63 13.5 202.19 377.67 G
+0 X
+90 450 4.63 13.5 202.19 377.67 A
+6 X
+90 450 4.63 13.5 211.46 377.67 G
+0 X
+90 450 4.63 13.5 211.46 377.67 A
+6 X
+90 450 4.63 13.5 220.73 377.67 G
+0 X
+90 450 4.63 13.5 220.73 377.67 A
+6 X
+90 450 4.63 13.5 230 377.67 G
+0 X
+90 450 4.63 13.5 230 377.67 A
+6 X
+90 450 4.63 13.5 239.27 377.67 G
+0 X
+90 450 4.63 13.5 239.27 377.67 A
+6 X
+90 450 4.63 13.5 248.54 377.67 G
+0 X
+90 450 4.63 13.5 248.54 377.67 A
+6 X
+90 450 4.64 13.5 285.62 377.67 G
+0 X
+90 450 4.64 13.5 285.62 377.67 A
+5 X
+90 450 25.49 31.5 120.31 359.67 G
+0 X
+90 450 25.49 31.5 120.31 359.67 A
+99.92 346.17 140.71 365.99 R
+5 X
+V
+3 F
+0 X
+(human) 108.32 360.66 T
+(evaluator) 104.1 352.66 T
+5 X
+90 450 44.91 18 328.37 508.17 G
+0 X
+90 450 44.91 18 328.37 508.17 A
+292.44 505.35 364.3 511.78 R
+5 X
+V
+0 X
+(ear) 322.82 506.45 T
+5 X
+90 450 44.91 18 148.72 688.17 G
+0 X
+90 450 44.91 18 148.72 688.17 A
+112.79 685.35 184.65 691.78 R
+5 X
+V
+0 X
+(composer) 132.29 686.45 T
+229.56 598.17 319.39 652.17 R
+N
+292.44 463.17 337.35 454.17 2 L
+0.1 H
+3 X
+N
+292.44 409.17 337.35 436.17 2 L
+N
+337.35 634.17 356.39 639.32 R
+0 X
+V
+0.05 H
+N
+328.37 598.17 364.3 616.17 R
+7 X
+V
+0 X
+(motive) 334.79 610.83 T
+0 F
+(to add) 336.45 602.83 T
+328.37 598.17 364.3 616.17 R
+0.2 H
+7 X
+N
+328.37 598.17 364.3 652.17 R
+0 X
+N
+225 656.88 369 683.88 R
+7 X
+V
+0 X
+-0.06 (The composer module sends the ear module) 226.61 678.55 P
+(a phrase in progress and a motive to be) 234.6 670.55 T
+(added at a de\336ned point in the phrase.) 236.38 662.55 T
+99 472.17 274.48 526.17 R
+7 X
+V
+0 X
+-0.14 (The ear module responds \322yes\323 or \322no\323 to the addition) 99.58 520.83 P
+(of the new motive; the cycle is repeated until the) 108.9 512.83 T
+(phrase meets some criteria for length. In this manner) 101.63 504.83 T
+(,) 269.85 504.83 T
+(phrases are constructed that adhere to the tonal sys-) 104.36 496.83 T
+(tems de\336ned by the ear chromosomes. The process is) 101.58 488.83 T
+(repeated for each ear chromosome in turn.) 119.13 480.83 T
+0 90 17.96 49.5 409.21 386.67 A
+415.13 336.27 409.2 337.18 412.95 341.86 3 L
+0 Z
+N
+2 Z
+270 360 17.96 49.5 409.21 386.67 A
+294.87 622.16 314.68 627.31 R
+7 X
+V
+0.05 H
+8 X
+N
+247.53 622.16 267.33 627.31 R
+0 X
+V
+N
+283.46 643.17 310.41 648.32 R
+4 X
+V
+0 X
+N
+202.62 409.17 292.44 463.17 R
+7 X
+V
+0.2 H
+0 X
+N
+245.68 449.01 265.49 454.17 R
+6 X
+V
+0.05 H
+0 X
+N
+202.62 409.17 292.44 427.17 R
+7 X
+V
+3 F
+0 X
+(phrase:) 234.65 421.83 T
+0 F
+(motive 1) 210.07 413.83 T
+3 F
+( ...) 238.28 413.83 T
+0 F
+(motive n+1) 248.27 413.83 T
+202.62 409.17 292.44 427.17 R
+0.2 H
+7 X
+N
+206.22 453.94 242.15 459.09 R
+4 X
+V
+0.05 H
+0 X
+N
+206.53 449.01 226.34 454.17 R
+6 X
+V
+0 X
+N
+214.51 444.4 238.93 449.55 R
+3 X
+V
+0 X
+N
+224.04 438.86 284.53 444.01 R
+2 X
+V
+0 X
+N
+246.15 444.4 285.91 449.55 R
+3 X
+V
+0 X
+N
+202.62 409.17 292.44 463.17 R
+0.2 H
+N
+267.93 433.16 287.74 438.31 R
+V
+0.05 H
+N
+220.58 433.16 240.39 438.31 R
+V
+N
+256.51 454.17 283.46 459.32 R
+4 X
+V
+0 X
+N
+245.68 433.16 256.51 438.31 R
+V
+N
+273.48 622.16 283.46 627.31 R
+V
+N
+90 232.67 521.17 720 R
+0.01 H
+N
+90 108 522 720 C
+0 0 612 792 C
+FMENDPAGE
+%%EndPage: "1" 2
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 1 1
+%%DocumentFonts: Times-Roman
+%%+ Times-Italic
+%%+ Times-BoldItalic
+%%+ Times-Bold
